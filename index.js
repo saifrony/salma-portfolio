@@ -9,7 +9,14 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //middleware
-app.use(cors());
+app.use(
+  
+  cors({
+    origin: "http://localhost:5173",
+  "Content-Type": "application/json",
+  'Access-Control-Allow-Origin': '*'
+})
+);
 app.use(express.json());
 
 
